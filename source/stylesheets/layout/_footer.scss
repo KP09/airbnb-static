@@ -1,3 +1,21 @@
 .wrapper-dark {
   background: #383838;
 }
+
+.social {
+  color: $gray-lighter;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  i {
+  font-size: 30px;
+  }
+  p {
+  font-size: 15px;
+  margin: 0;
+  }
+}
+
+.padded-footer {
+  padding: 50px 0;
+}
