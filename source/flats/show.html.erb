@@ -1,0 +1,15 @@
+<!-- Read from data.flats with owner's name as key -->
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+<div class="container">
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url(<%= image_path flat.flat_img %>);">
+    <div class="card-category"><%= flat.category %></div>
+    <div class="card-description">
+      <h2><%= flat.header %></h2>
+      <p><%= flat.description %></p>
+    </div>
+    <%= image_tag "#{flat.host_img}", class: "card-user avatar" %>
+    <%= link_to "", "#", class: "card-link" %>
+  </div>
+</div>

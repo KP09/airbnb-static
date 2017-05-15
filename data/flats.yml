@@ -1,0 +1,19 @@
+romain:
+  category: Popular
+  host_img: romain.jpg
+  flat_img: card-brussels.jpeg
+  header: Trip to Brussels
+  description: Weekend trip to Brussels!
+anne:
+  category: Popular
+  host_img: anne.jpg
+  flat_img: card-london.jpeg
+  header: Trip to London
+  description: Awesome weekend away!
+seb:
+  category: Popular
+  host_img: seb.jpg
+  flat_img: card-paris.jpg
+  header: Trip to Paris
+  description: Awesome weekend away!
+

@@ -1,39 +1,19 @@
 <div class="wrapper-grey">
   <div class="container padded">
     <div class="row">
-      <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('images/card-brussels.jpeg');">
-          <div class="card-category">Popular</div>
-          <div class="card-description">
-            <h2>Trip to Brussels</h2>
-            <p>Awesome weekend away!</p>
+      <% data.flats.each do |name, flat| %>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url(<%= image_path flat.flat_img %>);">
+            <div class="card-category"><%= flat.category %></div>
+            <div class="card-description">
+              <h2><%= flat.header %></h2>
+              <p><%= flat.description %></p>
+            </div>
+            <%= image_tag "#{flat.host_img}", class: "card-user avatar" %>
+            <%= link_to "", "#", class: "card-link" %>
           </div>
-          <%= image_tag "romain.jpg", class: "card-user avatar" %>
-          <%= link_to "", "#", class: "card-link" %>
         </div>
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('images/card-london.jpeg');">
-          <div class="card-category">Popular</div>
-          <div class="card-description">
-            <h2>Trip to London</h2>
-            <p>Awesome weekend away!</p>
-          </div>
-          <%= image_tag "anne.jpg", class: "card-user avatar" %>
-          <%= link_to "", "#", class: "card-link" %>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4)), url('images/card-paris.jpg');">
-          <div class="card-category">Popular</div>
-          <div class="card-description">
-            <h2>Trip to Paris</h2>
-            <p>Awesome weekend away!</p>
-          </div>
-          <%= image_tag "seb.jpg", class: "card-user avatar" %>
-          <%= link_to "", "#", class: "card-link" %>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
